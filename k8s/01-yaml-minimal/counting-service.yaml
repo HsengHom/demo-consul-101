@@ -1,0 +1,16 @@
+# Copyright IBM Corp. 2018, 2023
+# SPDX-License-Identifier: MPL-2.0
+
+# Pod example without Consul
+apiVersion: v1
+kind: Pod
+metadata:
+  name: counting-minimal-pod
+  labels:
+    app: counting
+spec:
+  containers:
+    - name: counting
+      image: hashicorp/counting-service:0.0.2
+      ports:
+      - containerPort: 9001
